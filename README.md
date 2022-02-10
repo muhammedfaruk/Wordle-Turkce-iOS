@@ -1,5 +1,6 @@
 # Wordle-Turkce-iOS
 Xcode üzerinde derleyerek telefonunuza yükleyebilirsiniz 😊  Günlük bir limit eklemedim istediğiniz kadar oynayabilirsiniz.
+Oyun sonunda sonuçlarınızı sosyal medya hesaplarınızda paylaşabilirsiniz. 
 
 # Nasıl oynanır
 
@@ -12,6 +13,6 @@ Her tahminden sonra, karoların rengi, tahmininizin kelimeye ne kadar yakın old
 
 # Screenshots
 
-<img src="https://user-images.githubusercontent.com/76944306/152526753-ba3ebf5e-4b10-41c0-9a03-57eeae7959a4.png" width="250" height="500" />
+<img src="https://user-images.githubusercontent.com/76944306/153370525-149fb303-af2b-43af-b545-16208d51eade.png" width="250" height="550" />
 
 
