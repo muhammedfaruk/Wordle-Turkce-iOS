@@ -43,7 +43,7 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         let randomword = words.randomElement()
         guard let rnd = randomword else {return}
-        word = rnd
+        word = "Peşin"
         print(rnd)
         configureBackCollection()
         configureCollection()
@@ -106,10 +106,12 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == self.collectionView{
             let width: CGFloat = (collectionView.bounds.width / 5) - 10
-            return CGSize(width: width, height: width)
+            let autoHeight = DeviceTypes.isiPad ? width - 30 : width
+            return CGSize(width: width, height: autoHeight)
         }else {
             let width: CGFloat = (collectionView.bounds.width / 5) - 10
-            return CGSize(width: width, height: width)
+            let autoHeight = DeviceTypes.isiPad ? width - 30 : width
+            return CGSize(width: width, height: autoHeight)
         }
     }
     
@@ -179,9 +181,7 @@ extension ViewController: UITextFieldDelegate{
                 }else {
                     selectedCell -= 1
                     setLetter(letter: string, type: .remove)
-                }
-                
-                
+                }                                
             }else if string == " "{
                 return false
                 

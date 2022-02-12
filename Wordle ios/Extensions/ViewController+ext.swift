@@ -212,18 +212,21 @@ extension ViewController{
     }
     
     
-    // MARK: Desing
+    // MARK: Design
     func configureCollection(){
         view.backgroundColor = .systemBackground
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         view.addSubview(collectionView)
         collectionView.backgroundColor = .clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        //let bottomConstant:CGFloat = DeviceTypes.isiPad ? print("evet ipad"): print("evet ipad")
+        let bottomConstant:CGFloat = DeviceTypes.isiPad ? -450 : -150
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150)
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomConstant)
         ])
         
         collectionView.dataSource = self
@@ -237,11 +240,13 @@ extension ViewController{
         view.addSubview(backcollectionView)
         backcollectionView.translatesAutoresizingMaskIntoConstraints = false
         
+        let bottomConstant:CGFloat = DeviceTypes.isiPad ? -450 : -150
+        
         NSLayoutConstraint.activate([
             backcollectionView.topAnchor.constraint(equalTo: view.topAnchor),
             backcollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             backcollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            backcollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150)
+            backcollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomConstant)
         ])
         
         backcollectionView.dataSource = self

@@ -33,7 +33,8 @@ class EnterVC: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
+    
     var words : [String] = []
     
     override func viewDidLoad() {
